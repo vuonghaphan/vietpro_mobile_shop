@@ -22,7 +22,9 @@ function loginFromSocialCallback ($fbUser) {
             if(session_status() == PHP_SESSION_NONE){
                 session_start();
             }
-            $user_fb = $_SESSION['fbUser']; 
+            $user_fb = $_SESSION['fbUser'];
+            // $test = $_SESSION['fbUser']; 
+            echo $user_fb;
             // header('location: ../index.php');
         }
         
