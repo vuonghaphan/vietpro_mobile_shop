@@ -69,12 +69,12 @@ if (! $accessToken->isLongLived()) {
 }
 $_SESSION['fb_access_token'] = (string) $accessToken;
 $fbUser = $respones->getGraphUser();
-$_POST['fbUser'] = $fbUser;
+// $_POST['fbUser'] = $fbUser;
 // print_r($fbUser); exit; 
-// if(!empty($fbUser)){
-//   include_once('function.php');
-//   loginFromSocialCallback($fbUser);
-// }
+if(!empty($fbUser)){
+  include_once('function.php');
+  loginFromSocialCallback($fbUser);
+}
 //$fbUser = $_SESSION['fbUser'];
 //header('location: ../index.php');
 // User is logged in with a long-lived access token.
